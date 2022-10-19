@@ -1,0 +1,136 @@
+2022-07-25 15:11:49 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'meulogin.users' doesn't exist in C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 133
+Stack Trace:
+#0 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'users', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('users', Array)
+#2 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('users')
+#3 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#4 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'users', 'Users')
+#7 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Users')
+#8 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\ModelTask->main('users')
+#9 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#11 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#12 C:\xampp\htdocs\cakephpmeulogin\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#13 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'meulogin.users' doesn't exist in C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(131): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'users', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('users', Array)
+#10 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('users')
+#11 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#12 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'users', 'Users')
+#15 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Users')
+#16 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\ModelTask->main('users')
+#17 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#18 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#19 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#20 C:\xampp\htdocs\cakephpmeulogin\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2022-07-25 15:11:55 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'meulogin.users' doesn't exist in C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 133
+Stack Trace:
+#0 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'users', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('users', Array)
+#2 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('users')
+#3 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#4 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'users', 'Users')
+#7 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Users')
+#8 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\ModelTask->main('users')
+#9 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#10 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#11 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#12 C:\xampp\htdocs\cakephpmeulogin\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#13 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'meulogin.users' doesn't exist in C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(131): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'users', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('users', Array)
+#10 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('users')
+#11 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#12 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'users', 'Users')
+#15 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Users')
+#16 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\ModelTask->main('users')
+#17 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#18 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#19 C:\xampp\htdocs\cakephpmeulogin\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#20 C:\xampp\htdocs\cakephpmeulogin\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#21 {main}
+
+
+2022-09-14 17:36:34 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'livraria.finalizarcompras' doesn't exist in C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 133
+Stack Trace:
+#0 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'finalizarcompra...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('finalizarcompra...', Array)
+#2 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('finalizarcompra...')
+#3 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#4 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'finalizarcompra...', 'Finalizarcompra...')
+#7 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Finalizarcompra...')
+#8 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Finalizarcompra...')
+#9 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Finalizarcompra...', 0)
+#10 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('finalizarcompra...')
+#12 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\xampp\htdocs\cakephpmeulogin2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'livraria.finalizarcompras' doesn't exist in C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+#0 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Database\Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Database\Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Database\Connection.php(302): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Database\Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(131): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(99): Cake\Database\Schema\Collection->_reflect('Column', 'finalizarcompra...', Array, Object(Cake\Database\Schema\TableSchema))
+#9 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('finalizarcompra...', Array)
+#10 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\ORM\Table.php(560): Cake\Database\Schema\CachedCollection->describe('finalizarcompra...')
+#11 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\ORM\Table.php(685): Cake\ORM\Table->getSchema()
+#12 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'finalizarcompra...', 'Finalizarcompra...')
+#15 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Finalizarcompra...')
+#16 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Finalizarcompra...')
+#17 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Finalizarcompra...', 0)
+#18 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#19 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('finalizarcompra...')
+#20 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#21 C:\xampp\htdocs\cakephpmeulogin2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#22 C:\xampp\htdocs\cakephpmeulogin2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#23 {main}
+
+

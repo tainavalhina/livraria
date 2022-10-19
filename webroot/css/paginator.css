@@ -1,0 +1,36 @@
+#pagination>li.current {
+    z-index: 2;
+    color: #ffffff;
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.428571429;
+    text-decoration: none;
+    border: 1px solid #dddddd;
+    margin-left: 0;
+    color: #999999;
+    z-index: 2;
+    color: #ffffff;
+    cursor: default;
+    background-color: #428BCA;
+    border-color: #428BCA;
+}
+
+#pagination>li.prev.disabled,
+#pagination>li.next.disabled {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.428571429;
+    text-decoration: none;
+    border: 1px solid #dddddd;
+    margin-left: 0;
+    color: #999999;
+    cursor: not-allowed;
+    background-color: #ffffff;
+    border-color: #dddddd;
+}
+
+.pagination>li>a {
+    color: #428BCA;
+}

@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+form {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #038bb4;
+    border-radius: 7px;
+
+}
+
+
+
+h1 {
+    font-size: 2rem;
+    width: 100%;
+    color: #ccc;
+    text-align: center;
+    font-weight: 900;
+}
+
+h3 {
+    color: #444444;
+}
+
+
+
+input:focus {
+    outline-color: #00c3ff;
+}
+
+.btn-blue {
+    cursor: pointer;
+    background: #00c3ff;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+
+.btn-blue:hover {
+    background: #038bb4;
+}
+
+a {
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+    color: #070707;
+}
+
+a:hover {
+    color: #0d3846;
+
+}
+
+.link {
+    color: #070707;
+    text-decoration: underline;
+}
+
+.input-group {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input-icon {
+    position: absolute;
+}
+
+input[type='checkbox'] {
+    display: inline-block;
+    height: 20px;
+    vertical-align: middle;
+}
+
+label {
+    width: 80%;
+    font-size: 16px;
+
+    cursor: pointer;
+    color: #27a2c8;
+
+    word-wrap: break-word;
+}
+
+
+
+
+.erro-geral {
+    background: #c82a2a;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.erro-input {
+    border: 1px solid #c82a2a;
+}
+
+.erro {
+    color: #c82a2a;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.sucesso {
+    background: #2ac874;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.oculto {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+button {
+    cursor: pointer;
+    background: #2bb4de;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+
+
+.paginator {
+    align-items: center;
+    text-align: center;
+    color: #ccc;
+
+}
+
+.col-10 {
+    background-color: #444444;
+}
